@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Marketing Content Generator — Generate marketing copy with AI</title>
+  <link rel="stylesheet" href="./marketing.css">
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Generate AI-optimized marketing copy from a website URL or pasted content. Supports blog posts, social updates, email, product descriptions and press releases." />
+  <link rel="canonical" href="https://example.com/ai-marketing-generator" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Marketing Content Generator" />
+  <meta property="og:description" content="Create conversion-focused marketing copy from your website or pasted content using AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/ai-marketing-generator" />
+  <!-- replace with real image -->
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+  <meta property="og:site_name" content="YourSiteName" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Marketing Content Generator" />
+  <meta name="twitter:description" content="Create conversion-focused marketing copy from your website or pasted content using AI." />
+  <meta name="twitter:image" content="https://example.com/og-image.jpg" />
+
+  <!-- AdSense (replace ca-pub-XXXXXXXX with your publisher ID) -->
+  <!-- NOTE: Only include this when your site is approved. -->
+  <script data-ad-client="ca-pub-XXXXXXXXXXXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#5D5CDE',
+            'primary-dark': '#4B4AC9'
+          }
+        }
+      }
+    }
+  </script>
+
+     <!-- Desktop nav links -->
+      <!-- <nav class="main-nav" role="navigation" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/index.html" class="nav-link">Home</a></li>
+          <li><a href="/blog.html" class="nav-link">Blog</a></li>
+          <li><a href="/ai-marketing.html" class="nav-link nav-link--active" data-active="ai">AI Marketing</a></li>
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li><a href="/community.html" class="nav-link">Community</a></li>
+        </ul>
+      </nav> -->
+
+
+   <nav class="nav" role="navigation" aria-label="main navigation">
+    <div class="nav-links">
+
+        <div class="dropdown">
+          <a href="../blog.html"><button class="drop-btn" id="catBtn" aria-haspopup="true" aria-expanded="false">Blogs ▾</button></a>
+          <div class="drop-menu" id="dropMenu" role="menu" aria-hidden="true">
+            <a href="#" data-cat="all">All</a>
+            <a href="#" data-cat="news">News</a>
+            <a href="#" data-cat="tech">Tech</a>
+            <a href="#" data-cat="business">Business</a>
+            <a href="#" data-cat="books">Books</a>
+            <a href="#" data-cat="hacks">Hacks</a>
+          </div>
+        </div>
+         <a href="./Ai marketing/Ai_marketing.html" >Product</a>
+        <a href="works.html">About us</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+
+
+   </nav>
+      
+    
+
+
+
+  <!-- Markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" defer></script>
+
+  <style>
+    /* small local styles to complement Tailwind */
+    .gradient-bg {
+      background: linear-gradient(135deg, rgba(15, 13, 160, 0.5) 0%,rgba(30, 99, 190, 0.5) 100%);
+    }
+    .fade-in {
+      animation: fadeIn .45s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px) }
+      to { opacity: 1; transform: translateY(0) }
+    }
+    /* keep form control appearance consistent in browsers */
+    input[type="url"]::-webkit-input-placeholder,
+    input[type="text"]::-webkit-input-placeholder {
+      opacity: 0.8;
+    }
+  </style>
+
+  <!-- Basic structured data — update values for production -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI Marketing Content Generator",
+    "url": "https://example.com/ai-marketing-generator",
+    "description": "Create AI-optimized marketing copy from a URL or pasted content.",
+    "applicationCategory": "BusinessApplication"
+  }
+  </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased">
+  <header class="gradient-bg text-white py-8">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-center mb-2">AI Marketing Content Generator</h1>
+      <p class="text-center text-sm sm:text-lg opacity-90 max-w-2xl mx-auto">Transform web content into compelling marketing copy for blogs, social, email, product pages and press releases.</p>
+    </div>
+  </header>
+
+  <main role="main" class="max-w-5xl mx-auto px-4 py-8">
+    <!-- Form Card -->
+    <section class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-8 shadow">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-4 flex items-center">
+        <!-- decorative icon -->
+        <svg class="w-5 h-5 mr-2 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        Company information
+      </h2>
+
+      <form id="contentForm" class="space-y-4" novalidate>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="companyName" class="block text-sm font-medium mb-1">Company name <span class="text-red-500">*</span></label>
+            <input required id="companyName" name="companyName" type="text" aria-required="true"
+              class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-primary focus:outline-none"
+              placeholder="Enter company name" />
+          </div>
+
+          <div>
+            <label for="industry" class="block text-sm font-medium mb-1">Industry</label>
+            <input id="industry" name="industry" type="text"
+              class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-primary focus:outline-none"
+              placeholder="e.g., Technology, Healthcare" />
+          </div>
+        </div>
+
+        <div>
+          <label for="websiteUrl" class="block text-sm font-medium mb-1">Website URL or paste content <span class="text-red-500">*</span></label>
+          <input id="websiteUrl" name="websiteUrl" type="url" inputmode="url" required
+            class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-primary focus:outline-none"
+            placeholder="https://example.com or paste content directly" />
+          <p class="text-xs text-gray-500 mt-1">If you paste content, prefix it with "<code>CONTENT:</code>" so the AI knows it's pasted text.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="contentType" class="block text-sm font-medium mb-1">Content type</label>
+            <select id="contentType" name="contentType" class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-primary focus:outline-none">
+              <option value="blog">Blog post</option>
+              <option value="social">Social media post</option>
+              <option value="email">Email marketing</option>
+              <option value="product">Product description</option>
+              <option value="press">Press release</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="targetAudience" class="block text-sm font-medium mb-1">Target audience</label>
+            <input id="targetAudience" name="targetAudience" type="text"
+              class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-primary focus:outline-none"
+              placeholder='e.g., "Marketing directors at SaaS companies"' />
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <button id="generateBtn" type="submit" class="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-4 rounded-lg inline-flex items-center justify-center" aria-live="polite">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            <span class="btn-label">Generate Marketing Content</span>
+          </button>
+
+          <button id="clearBtn" type="button" class="px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600" title="Clear form">
+            Clear
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Loading State -->
+    <div id="loadingState" class="hidden bg-gray-50 dark:bg-gray-800 rounded-xl p-8 mb-8 text-center" role="status" aria-live="polite" aria-hidden="true">
+      <div class="animate-spin w-12 h-12 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4" aria-hidden="true"></div>
+      <h3 class="text-xl font-semibold mb-2">Analyzing content</h3>
+      <p id="loadingMessage" class="text-gray-600 dark:text-gray-400">AI is processing your content<span id="loadingDots">.</span></p>
+    </div>
+
+    <!-- Results -->
+    <section id="resultsSection" class="hidden">
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow overflow-hidden">
+        <div class="gradient-bg text-white p-6">
+          <h2 class="text-2xl font-bold mb-1">Generated Marketing Content</h2>
+          <p class="opacity-90">AI-optimized content ready for your campaigns</p>
+        </div>
+
+        <div class="p-6">
+          <article id="generatedContent" class="prose dark:prose-invert max-w-none" tabindex="0" aria-live="polite">
+            <!-- content inserted here -->
+          </article>
+
+          <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div class="flex flex-wrap gap-3">
+              <button id="copyBtn" class="flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                Copy content
+              </button>
+
+              <button id="regenerateBtn" class="flex items-center px-4 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581"></path>
+                </svg>
+                Regenerate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example responsive AdSense placement (replace slot id) - optional -->
+    <div class="mt-8">
+      <!-- Only display ads after you are allowed to show them. -->
+      <ins class="adsbygoogle block"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <!-- Tips -->
+    <section class="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6">
+      <h3 class="text-lg font-semibold mb-4">Pro tips for better results</h3>
+      <div class="grid md:grid-cols-2 gap-4 text-sm">
+        <div class="space-y-2">
+          <p><strong>Provide specific URLs:</strong> Product pages, about, or service descriptions work best.</p>
+          <p><strong>Be specific about audience:</strong> "Marketing directors at SaaS companies" beats "professionals".</p>
+        </div>
+        <div class="space-y-2">
+          <p><strong>Include industry context:</strong> Helps the AI match tone and messaging.</p>
+          <p><strong>Try multiple types:</strong> The same content converted for blog, email and social will differ in tone.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightweight toast/alert area -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 invisible transition-opacity duration-300"></div>
+
+  <script src="./main.js">
+    
+  </script>
+</body>
+</html>

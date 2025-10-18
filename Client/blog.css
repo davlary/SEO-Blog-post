@@ -21,6 +21,7 @@
     /* ===== Navbar ===== */
     .nav{
       background: linear-gradient(90deg, rgba(42,82,152,0.06), rgba(0,198,255,0.03));
+      
       backdrop-filter: blur(6px);
       padding:18px 6%;
       display:flex;
@@ -112,8 +113,8 @@
     .container{padding:24px 6% 80px}
     .grid{
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap:22px;
+      grid-template-columns: repeat(auto-fit, minmax(320px,2fr, 1fr));
+      gap:10rem;
       align-items:start;
     }
 

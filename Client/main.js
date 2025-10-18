@@ -2,14 +2,14 @@
     const posts = [
       {
         id: 'p1',
-        title: '10 Mind-Bending Design Facts That Will Change How You Create',
+        title: 'Top 14 AI Models in 2025 for Businesses to Watch',
         category: 'design',
         tags: ['design','creativity'],
-        excerpt: 'Design isn’t just decoration — it’s a toolkit for thinking. Here are ten surprising facts about visual perception and composition that every designer should know.',
+        excerpt: ' The strongest AI models don’t just process data; they think, reason, and create. Some talk like humans, some decode complex logic, and others write code like expert engineers.',
         img: 'https://images.unsplash.com/photo-1495555687390-26b8a0b66b9a?w=1200&q=80',
         createdAt: '2025-10-01T10:15:00Z',
         views: 2300,
-        readMore: 'https://example.com/design-facts'
+        readMore: 'https://www.thinkstack.ai/blog/best-ai-models/'
       },
       {
         id: 'p2',
