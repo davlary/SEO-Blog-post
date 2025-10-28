@@ -1,10 +1,10 @@
  
     :root{
-      --bg:#f7f9fc;
-      --accent-1:#2a5298;
-      --accent-2:#00c6ff;
-      --muted:#98a2b3;
-      --card:#ffffff;
+      --bg: #f7f9fc;
+      --accent-1: #5D5CDE; /* marketing primary */
+      --accent-2: #4B4AC9;
+      --muted: #98a2b3;
+      --card: #ffffff;
       --glass: rgba(255,255,255,0.6);
       --radius:14px;
     }
@@ -18,41 +18,33 @@
       -moz-osx-font-smoothing:grayscale;
     }
 
-    /* ===== Navbar ===== */
+    /* ===== Navbar (match marketing theme) ===== */
     .nav{
-      background: linear-gradient(90deg, rgba(42,82,152,0.06), rgba(0,198,255,0.03));
-      
-      backdrop-filter: blur(6px);
-      padding:18px 6%;
+      background: linear-gradient(90deg, rgba(15,13,160,0.9), rgba(93,92,222,0.85));
+      backdrop-filter: blur(8px);
+      padding:12px 6%;
       display:flex;
       align-items:center;
       justify-content:space-between;
       position:sticky;
       top:0;
-      z-index:50;
-      box-shadow:0 6px 20px rgba(10,20,30,0.04);
+      z-index:60;
+      box-shadow:0 8px 30px rgba(10,20,30,0.06);
     }
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap:12px;
       text-decoration:none;
       color:inherit;
     }
-    .logo {
-      width:44px;height:44px;border-radius:10px;
-      background:linear-gradient(135deg,var(--accent-1),var(--accent-2));
-      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;
-      box-shadow:0 6px 18px rgba(42,82,152,0.18);
-    }
-    .brand h1{font-size:18px;margin:0}
-    .nav-links{display:flex;gap:14px;align-items:center}
-    .nav-links a, .drop-btn {
-      text-decoration:none;
-      color:#0f1724;
-      padding:8px 12px;border-radius:8px;font-weight:500;
-    }
-    .nav-links a:hover, .drop-btn:hover{background:rgba(42,82,152,0.06)}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:0 8px 24px rgba(45,40,120,0.16)}
+    .brand h1{font-size:16px;margin:0}
+    .nav-links{display:flex;gap:12px;align-items:center}
+    .hamburger{display:none;background:transparent;border:0;color:white;font-size:20px;padding:8px;border-radius:8px}
+    .nav-links a, .drop-btn{ text-decoration:none; color:#fff; padding:8px 12px;border-radius:8px;font-weight:600; transition:all .16s ease; border:1px solid rgba(255,255,255,0.06)}
+    .nav-links a:hover, .drop-btn:hover{ transform:translateY(-2px); background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); box-shadow:0 10px 28px rgba(50,50,120,0.12)}
+    .nav-link--active{ background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.12); color:white}
 
     /* Dropdown */
     .dropdown{position:relative;}
@@ -68,16 +60,10 @@
     .drop-menu a{padding:8px 10px;color:#0f1724;border-radius:8px}
     .drop-menu a:hover{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:white}
 
-    /* Search & CTA */
-    .searchbar{
-      display:flex;align-items:center;gap:8px;background:white;padding:6px 10px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,30,0.04);
-    }
-    .searchbar input{
-      border:0;outline:0;font-size:14px;width:220px;
-    }
-    .cta{
-      background:var(--accent-1);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;margin-left:10px;
-    }
+/* Search & CTA */
+.searchbar{display:flex;align-items:center;gap:8px;background:white;padding:6px 10px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,30,0.04)}
+.searchbar input{border:0;outline:0;font-size:14px;width:200px}
+.cta{background:var(--accent-1);color:white;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600;margin-left:10px}
 
     /* ===== Header Hero ===== */
     .hero{
@@ -113,9 +99,13 @@
     .container{padding:24px 6% 80px}
     .grid{
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px,2fr, 1fr));
-      gap:10rem;
+      /* increase min card width so cards have more horizontal space for text */
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap:2.5rem;
       align-items:start;
+      width:100%;
+      max-width:1200px;
+      margin:0 auto;
     }
 
     .post-card{
@@ -127,15 +117,16 @@
     .post-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(10,20,30,0.08)}
 
     /* image side */
-    .post-media{flex:0 0 42%;min-width:180px;max-width:320px;overflow:hidden}
-    .post-media img{width:100%;height:100%;object-fit:cover;display:block}
+  /* make image column slightly wider so media and text balance better */
+  .post-media{flex:0 0 48%;min-width:220px;max-width:360px;overflow:hidden}
+  .post-media img{width:100%;height:100%;object-fit:cover;display:block;min-height:260px}
 
     /* content side */
-    .post-body{padding:18px 18px 14px;flex:1;display:flex;flex-direction:column;gap:8px}
+  .post-body{padding:20px 20px 18px;flex:1;display:flex;flex-direction:column;gap:10px}
     .post-meta{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted)}
     .post-title{font-size:18px;color:var(--accent-1);margin:2px 0;font-weight:700}
     .post-excerpt{color:#25303a;font-size:15px;line-height:1.45}
-    .post-actions{margin-top:auto;display:flex;align-items:center;gap:8px}
+  .post-actions{margin-top:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 
     .tag{padding:6px 10px;background:rgba(42,82,152,0.06);border-radius:999px;font-weight:600;color:var(--accent-1);font-size:13px}
 
@@ -143,9 +134,9 @@
 
     /* Comments area (collapsible) */
     .comments{
-      margin-top:12px;padding-top:12px;border-top:1px dashed rgba(15,23,36,0.06);
+      margin-top:16px;padding-top:14px;border-top:1px dashed rgba(15,23,36,0.06);
     }
-    .comment-list{display:flex;flex-direction:column;gap:10px;max-height:220px;overflow:auto;padding-right:6px}
+  .comment-list{display:flex;flex-direction:column;gap:10px;max-height:260px;overflow:auto;padding-right:6px}
     .comment{background:#fbfcfe;padding:8px;border-radius:8px;border:1px solid rgba(15,23,36,0.03)}
     .comment small{color:var(--muted);display:block;font-size:12px;margin-bottom:6px}
 
@@ -161,5 +152,39 @@
       .post-card{flex-direction:column}
       .post-media{flex-basis:auto;min-height:200px;max-width:100%}
       .post-body{padding:14px}
+    }
+
+    /* Desktop: two-column fixed split per card and two-column grid */
+    @media (min-width:1100px) {
+      .grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap:3rem;
+        max-width:1400px;
+      }
+
+      /* Make each card use a two-column layout for media + content */
+      .post-card{
+        display:grid;
+        grid-template-columns: 48% 52%;
+        align-items:stretch;
+        gap:0;
+      }
+
+      .post-media{min-width:0;max-width:100%;flex:initial}
+      .post-media img{min-height:300px}
+
+      /* Typography adjustments for desktop */
+      .post-title{font-size:20px}
+      .post-excerpt{font-size:16px;line-height:1.6}
+      .post-meta{font-size:13px}
+      .tag{font-size:12px;padding:6px 10px}
+    }
+
+    /* mobile nav behavior */
+    @media (max-width:768px){
+      .hamburger{display:inline-flex}
+      .nav-links{position:absolute;top:64px;right:12px;background:linear-gradient(180deg,rgba(15,13,160,0.95),rgba(93,92,222,0.95));padding:12px;border-radius:12px;flex-direction:column;gap:8px;display:none;min-width:180px}
+      .nav-links a{color:#fff}
+      .nav-links.open{display:flex}
     }
  

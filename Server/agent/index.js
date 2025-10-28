@@ -1,33 +1,24 @@
-import express from "express";
-import cors from 'cors'
-import {agent} from "./agent.js"
+// import { runMarketingPrompt } from "./agent.impl.js";
 
-const app = express();
-const port = 3001;
+// async function main() {
+//   const prompt = `You are a marketing assistant. Write a short SEO-friendly blog intro (2-3 sentences) about how small businesses can use local SEO to increase foot traffic.`;
 
-app.use(express.json());
-app.use(cors({origin: '*'}));
+//   try {
+//     const result = await runMarketingPrompt(prompt, { max_token: "256" });
 
-app.get('/', (reg, res)=>{
-    res.send('Hello World');
-});
+//     // The result shape depends on the underlying LLM wrapper. We try to
+//     // print common properties if present, otherwise print the raw result.
+//     if (result && result.messages) {
+//       console.log("Agent messages: ", result.messages.map((m) => m.content).join('\n'));
+//     } else if (result && result.output) {
+//       console.log("Model output:", result.output);
+//     } else {
+//       console.log("Result:", result);
+//     }
+//   } catch (err) {
+//     console.error("Error running marketing prompt:", err);
+//   }
+// }
 
-app.post('./generate', async (req, res) => {
-    const {prompt, thread_id} = req.body;
-    const result = await agent.invoke({
-        messages:[{
-            role: 'user',
-            content:prompt,
-        }]
-    }, {
-        configurable: {thread_id}
-    })
-
-    res.json(result.messages.at(-1)?.content);
-})
-
-
-
-app.listen(port, ()=> {
-    console.log(`Server is running on port ${port}`)
-})
+// main();
+// // index.js is a quick sample runner. Run `npm start` to execute this file.

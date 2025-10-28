@@ -32,34 +32,25 @@
 <body>
 
   <!-- ===== Navbar ===== -->
-  <nav class="nav" role="navigation" aria-label="main navigation">
+  <header class="nav site-header" role="navigation" aria-label="main navigation">
     <a class="brand" href="index.html">
       <div class="logo">D</div>
       <div>
         <h1 style="font-size:16px;margin:0">DavLary</h1>
-
       </div>
     </a>
 
-    <div style="display:flex;gap:12px;align-items:center">
-      <div class="nav-links">
-
-        <div class="dropdown">
-          <button class="drop-btn" id="catBtn" aria-haspopup="true" aria-expanded="false">Blogs ▾</button>
-          <div class="drop-menu" id="dropMenu" role="menu" aria-hidden="true">
-            <a href="#" data-cat="all">All</a>
-            <a href="#" data-cat="news">News</a>
-            <a href="#" data-cat="tech">Tech</a>
-            <a href="#" data-cat="business">Business</a>
-            <a href="#" data-cat="books">Books</a>
-            <a href="#" data-cat="hacks">Hacks</a>
-          </div>
-        </div>
-         <a href="./Ai marketing/Ai_marketing.html">Product</a>
-        <a href="works.html">About us</a>
-        <a href="contact.html">Contact us</a>
+    <nav class="nav" aria-label="primary navigation">
+      <button id="navToggle" class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="./Ai marketing/Ai_marketing.html" class="nav-link">Home</a>
+        <a href="./blog.html" class="nav-link nav-link--active">Blog</a>
+        <a href="works.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </div>
+    </nav>
 
+    <div style="display:flex;gap:12px;align-items:center">
       <div class="searchbar" role="search" aria-label="Blog search">
         <input id="searchInput" placeholder="Search posts, e.g. design facts..." />
         <button class="filter-btn" id="clearSearch" title="Clear">✕</button>
@@ -67,7 +58,7 @@
 
       <a class="cta" href="https://yourdomain.com/subscribe">Subscribe</a>
     </div>
-  </nav>
+  </header>
 
   <!-- ===== Hero & Controls ===== -->
   <header class="hero">
@@ -103,7 +94,7 @@
 
   <footer style="padding:26px 6%;text-align:center;color:var(--muted);border-top:1px solid rgba(15,23,36,0.03)">
     <div style="max-width:900px;margin:0 auto">
-      &copy; <strong>David Udeji</strong> — All rights reserved. Built for showcasing high-value micro-articles.
+      &copy; <strong>DavLary Marketing Agency</strong> — All rights reserved. Built for showcasing high-value micro-articles.
     </div>
   </footer>
 
